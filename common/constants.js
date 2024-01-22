@@ -65,7 +65,6 @@ const GENRE = [
   "community",
   "entertainment",
   "celebrities",
-  "anime",
   "cartoons",
   "comics",
   "games",
@@ -73,7 +72,6 @@ const GENRE = [
   "humor",
   "jokes",
   "riddles",
-  "memes",
   "internet",
   "weird",
   "political",
@@ -86,7 +84,6 @@ const GENRE = [
   "erotica",
   "tragedy",
   "crime",
-  "noir",
   "youngadult",
   "children",
   "paranormal",
@@ -132,7 +129,7 @@ TYPE = [
   "emotionally engaging",
 ];
 
-STORY_LENGTH = 175;
+STORY_LENGTH = 170;
 TITLE_LENGTH = 5;
 TWIST_COUNT = 3;
 
