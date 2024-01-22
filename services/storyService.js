@@ -43,7 +43,8 @@ async function createStory() {
   const story = await llamaClient.generate(createStoryPrompt);
 
   const createTitlePrompt = promptService.getCreateTitlePrompt(story);
-  const title = await llamaClient.generate(createTitlePrompt);
+  let title = await llamaClient.generate(createTitlePrompt);
+  title = title.replace(/^"|"$/g, "");
 
   const storyId = await storyApiClient.createStory(story, title);
 
@@ -56,7 +57,8 @@ async function createTwist(story, parentId) {
   const twist = await llamaClient.generate(createTwistPrompt);
 
   const createTitlePrompt = promptService.getCreateTitlePrompt(twist);
-  const title = await llamaClient.generate(createTitlePrompt);
+  let title = await llamaClient.generate(createTitlePrompt);
+  title = title.replace(/^"|"$/g, "");
 
   const twistId = await storyApiClient.createTwist(twist, title, parentId);
   return { twist, twistId };
